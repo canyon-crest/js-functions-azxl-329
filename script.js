@@ -19,8 +19,9 @@
 
 function greet(name) {
   // Write your code here
-
+return "Hello, " + name + "!";
 }
+let count = 0;
 
 
 // --- myFunc() — Persistent Counter ---
@@ -39,7 +40,8 @@ function greet(name) {
 
 function myFunc() {
   // Write your code here
-
+ count++;
+  return count;
 }
 
 
@@ -57,9 +59,10 @@ function myFunc() {
 
 function getRandomNum(max) {
   // Write your code here
-
+ if (isNaN(max) || max < 1) {
+    return 0;
 }
-
+return Math.floor(Math.random() * max) + 1;
 
 // --- myAdder(x, y) ---
 // This function adds two numbers and returns the result.
@@ -70,7 +73,7 @@ function getRandomNum(max) {
 
 function myAdder(x, y) {
   // Write your code here
-
+ return x + y;
 }
 
 
@@ -88,7 +91,9 @@ function myAdder(x, y) {
 
 function distance(x1, y1, x2, y2) {
   // Write your code here
-
+let dxSquared = (x2 - x1) ** 2;
+  let dySquared = (y2 - y1) ** 2;
+  return Math.sqrt(dxSquared + dySquared).toFixed(2);
 }
 
 
@@ -103,7 +108,9 @@ function distance(x1, y1, x2, y2) {
 
 function tipCalc(bill, tipPercent) {
   // Write your code here
-
+  let tip = bill * (tipPercent / 100);
+  let total = bill + tip;
+  return total.toFixed(2);
 }
 
 
