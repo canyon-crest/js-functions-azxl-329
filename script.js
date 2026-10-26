@@ -63,6 +63,7 @@ function getRandomNum(max) {
     return 0;
 }
 return Math.floor(Math.random() * max) + 1;
+}
 
 // --- myAdder(x, y) ---
 // This function adds two numbers and returns the result.
@@ -159,3 +160,4 @@ function onTipClick() {
   let result = tipCalc(bill, pct);
   document.getElementById("outTip").innerHTML = result;
 }
+
